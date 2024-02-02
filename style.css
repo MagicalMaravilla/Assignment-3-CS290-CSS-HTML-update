@@ -1,4 +1,4 @@
-/* Adjustments for Significantly Larger Text Sizes */
+/* Base font size adjustments for a middle ground approach */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #e8f5e9;
@@ -7,66 +7,69 @@ body {
     background-attachment: fixed;
     color: #333;
     text-align: center;
-    padding: 40px; /* Increased padding */
+    padding: 30px; /* Slightly increased padding */
     margin: 0;
-    line-height: 2; /* Adjusted for better readability with larger text */
+    line-height: 2; /* Adjusted for larger text */
 }
 
-/* Updating header sizes and padding */
+/* Header adjustments for increased text size */
 header {
     background-color: #81c784;
     color: white;
-    padding: 60px 0; /* Increased padding for larger header text */
-    margin-bottom: 50px; /* Increased margin */
+    padding: 50px 0; /* Adjusted padding */
+    margin-bottom: 40px; /* Increased margin */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Applying 3x larger font sizes */
+header h1, header h3, header h4 {
+    color: white;
+}
+
+/* Scaled font sizes */
 h1, h2, h3, h4, p, a, li, dt, dd {
-    font-size: 3.6em; /* Adjusted base font size for larger text */
+    font-size: 1.8em; /* Increased from original, but less than 3x */
 }
 
 h1 {
-    font-size: 12em; /* 3x larger for main header */
+    font-size: 6em; /* Adjusted for main header */
 }
 
 h2 {
-    font-size: 9em; /* 3x larger for section headers */
+    font-size: 4.5em; /* Adjusted for section headers */
 }
 
 h3, h4 {
-    font-size: 7.2em; /* 3x larger for sub-headers */
+    font-size: 3.6em; /* Adjusted for sub-headers */
 }
 
 #timer {
-    font-size: 12em; /* 3x larger for the countdown timer */
+    font-size: 6em; /* Adjusted for the countdown timer */
     color: #4caf50;
-    margin: 40px 0; /* Adjusted margin */
-    padding: 30px; /* Increased padding */
+    margin: 30px 0;
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px; /* Adjusted for larger text */
+    border-radius: 15px; /* Adjusted */
     display: inline-block;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Adjusting section-specific styles for readability with larger text */
+/* Section and table adjustments */
 #about-earth-day, section:not(#countdown) {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px; /* Increased padding */
-    border-radius: 20px; /* Adjusted for consistency */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Table Styles for Larger Text */
 table {
-    width: 90%; /* Adjusted for larger text */
-    margin: 40px auto; /* Centered with increased margin */
-    font-size: 4.5em; /* 3x larger font size for table */
+    width: 80%;
+    margin: 30px auto;
+    font-size: 2.25em; /* Adjusted */
 }
 
 th, td {
-    padding: 30px 40px; /* Increased padding for larger text */
-    border: 2px solid #ddd; /* Adjusted border for visibility */
+    padding: 20px 30px;
+    border: 1px solid #ddd;
     text-align: center;
 }
 
@@ -75,14 +78,13 @@ th {
     color: white;
 }
 
-/* Responsive Design Adjustments for Large Text */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    body, h1, h2, h3, h4, p, a, li, dt, dd, #timer, section, table, th, td {
-        font-size: 1.2em; /* Scaled down for smaller screens */
-        padding: 20px; /* Adjusted padding */
+    h1, h2, h3, h4, p, a, li, dt, dd, #timer, table, th, td {
+        font-size: 1em; /* Scaled down for mobile */
     }
-    
+
     table {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
     }
 }
