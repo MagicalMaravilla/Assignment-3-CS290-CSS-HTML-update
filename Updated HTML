@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Day Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Countdown to Earth Day 2024</h1>
+        <h3>Join the Movement</h3>
+        <h4>Every Action Counts</h4>
+    </header>
+
+    <section id="countdown">
+        <p id="timer">Loading...</p>
+    </section>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        function updateCountdown() {
+            const earthDay = new Date('April 22, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = earthDay - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="timer"
+            document.getElementById('timer').innerHTML = days + " Days " + hours + " Hours " 
+            + minutes + " Minutes " + seconds + " Seconds ";
+
+            // If the countdown is finished, write some text
+            if (difference < 0) {
+                clearInterval(x);
+                document.getElementById('timer').innerHTML = "Earth Day is here!";
+            }
+        }
+
+        // Update the countdown every 1 second
+        let x = setInterval(updateCountdown, 1000);
+    </script>
+
+    <section id="about-earth-day">
+        <h2>About Earth Day</h2>
+        <p>Earth Day, celebrated every year on April 22nd, marks a global commitment to environmental protection and sustainability. It's a day when individuals, communities, and organizations around the world engage in activities to promote ecological awareness and take action towards preserving our planet.<br>
+            Since its inception in 1970, Earth Day has grown into a worldwide movement, emphasizing the urgent need to address environmental issues such as climate change, pollution, and wildlife conservation.</p>
+        <ul>
+            <li>Climate Action</li>
+            <li>Science and Education</li>
+            <li>Conservation and Restoration</li>
+        </ul>
+        <ol>
+            <li>Reduce</li>
+            <li>Reuse</li>
+            <li>Recycle</li>
+        </ol>
+        <dl>
+            <dt>Carbon Footprint</dt>
+            <dd>The total amount of greenhouse gases produced to directly and indirectly support human activities, typically expressed in equivalent tons of carbon dioxide (CO2).<br>
+            This includes emissions from burning fossil fuels for electricity, heat, and transportation, as well as emissions from industries, agriculture, and deforestation. Reducing our carbon footprint is crucial in combating climate change, and it can be achieved through energy efficiency, adopting renewable energy sources, and changing consumption habits.</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Learn More</h2>
+        <p>For more information, visit the <a href="https://www.earthday.org/" target="_blank">Earth Day Official Website</a>.</p>
+        <p>Check out today.com <a href="https://www.today.com/life/holidays/earth-day-activities-rcna70983">for free earth day activities.</a>.</p>
+        <p>Learn about <a href="https://en.wikipedia.org/wiki/Earth_Day#Events#History">Earth Day History</a>.</p>
+    </section>
+
+    <section>
+        <h2>Earth Day Gallery</h2>
+        <!-- First Earth Day Image -->
+        <a href="https://ibb.co/LNXFjDk">
+            <img src="https://i.ibb.co/0sR74pD/DALL-E-2024-01-22-12-08-58-A-surreal-image-for-Earth-Day-featuring-a-large-vibrant-Earth-as-seen-fro.png" alt="AI Art Earth Hands 1" width="500" height="500">
+        </a>
+        <!-- Second Earth Day Image -->
+        <a href="https://ibb.co/GcWWLpZ">
+            <img src="https://i.ibb.co/0sR74pD/DALL-E-2024-01-22-12-08-58-A-surreal-image-for-Earth-Day-featuring-a-large-vibrant-Earth-as-seen-fro.png" alt="AI Art Earth Hands 2" width="500" height="500">
+        </a>
+        <!-- Third Earth Day Image -->
+        <a href="https://ibb.co/LNXFjDk">
+            <img src="https://i.ibb.co/sRHpkRT/DALL-E-2024-01-22-12-09-21-An-image-representing-Earth-Day-showcasing-a-detailed-and-vibrant-Earth-v.png" alt="AI Art Earth Leaves Spinning 1" width="500" height="500">
+        </a>
+        <!-- Fourth Earth Day Image -->
+        <a href="https://ibb.co/C76G1Bb">
+            <img src="https://i.ibb.co/PhMHmxc/DALL-E-2024-01-22-12-09-25-An-image-representing-Earth-Day-showcasing-a-detailed-and-vibrant-Earth-v.png" alt="AI Art Earth Hands 2" width="500" height="500">
+        </a>
+        <!-- Fifth Earth Day Image -->
+        <a href="https://ibb.co/kD1qr6Q">
+            <img src="https://i.ibb.co/2MNcLYg/DALL-E-2024-01-22-12-09-29-An-image-for-Earth-Day-showing-a-detailed-and-vibrant-Earth-in-the-center.png" alt="AI Art Earth Hands 1" width="500" height="500">
+        </a>
+        <!-- Second Earth Day Image -->
+        <a href="https://ibb.co/wwkm8Lv">
+            <img src="https://i.ibb.co/4YqrCfQ/DALL-E-2024-01-22-12-09-33-An-image-for-Earth-Day-showing-a-detailed-and-vibrant-Earth-in-the-center.png" alt="AI Art Earth Hands 2" width="500" height="500">
+        </a>
+        
+    </section>
+    
+
+    <section>
+        <h2>Earth Day Video</h2>
+        <p>Watch this video to learn more about Earth Day:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PL31i1cu22U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <h2>Earth Day Facts</h2>
+        <table border="1">
+            <caption>Important Earth Day Facts</caption>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1970</td>
+                    <td>First Earth Day</td>
+                </tr>
+                <tr>
+                    <td>1990</td>
+                    <td>Earth Day Goes Global</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Join us in making a difference!</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- New Section: What I Love About Earth -->
+    <section id="love-earth-section">
+        <h2>What I Love About Earth</h2>
+        <div class="love-earth-story">
+            <p>"I love the endless variety of nature, from mountains to oceans, and the incredible diversity of life that calls it home." - Jane Doe</p>
+        </div>
+        <div class="love-earth-story">
+            <p>"The way the Earth changes with the seasons, each bringing its own beauty and challenges, reminds me of the importance of adaptability and appreciation." - John Smith</p>
+        </div>
+        <!-- Placeholder for more stories or a form for submission -->
+    </section>
+
+    <footer>
+        <p>Created for Earth Day 2024 By Tony Maravilla for CS 260</p>
+    </footer>
+</body>
+</html>
