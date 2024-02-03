@@ -1,0 +1,47 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('https://api.sheety.co/your_project_name/sheet_name')
+    .then(response => response.json())
+    .then(data => {
+      // Assuming your sheet's columns are named 'name' and 'story'
+      const stories = data.sheet_name; // Replace 'sheet_name' with your actual sheet name as provided by Sheety
+      const container = document.getElementById('love-earth-section');
+      
+      stories.forEach(story => {
+        const storyElement = document.createElement('div');
+        storyElement.className = 'love-earth-story';
+        storyElement.innerHTML = `<p>"${story.story}" - ${story.name}</p>`;
+        container.appendChild(storyElement);
+      });
+    })
+    .catch(error => console.error('Error loading stories:', error));
+});
+</script>
+
+
+
+/* New Section for User Stories About Earth */
+#love-earth-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 20px auto;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #81c784;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.love-earth-story {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+}
