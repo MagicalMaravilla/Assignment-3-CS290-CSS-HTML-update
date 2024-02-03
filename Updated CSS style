@@ -1,0 +1,148 @@
+/* Base font size adjustments for a middle ground approach */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f5e9;
+    background-image: url('https://i.ibb.co/0sR74pD/DALL-E-2024-01-22-12-08-58-A-surreal-image-for-Earth-Day-featuring-a-large-vibrant-Earth-as-seen-fro.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    text-align: center;
+    padding: 30px; /* Slightly increased padding */
+    margin: 0;
+    line-height: 2; /* Adjusted for larger text */
+}
+
+/* Header adjustments for increased text size */
+header {
+    background-color: #81c784;
+    color: white;
+    padding: 50px 0; /* Adjusted padding */
+    margin-bottom: 40px; /* Increased margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1, header h3, header h4 {
+    color: white;
+}
+
+/* Scaled font sizes */
+h1, h2, h3, h4, p, a, li, dt, dd {
+    font-size: 1.8em; /* Increased from original, but less than 3x */
+}
+
+h1 {
+    font-size: 6em; /* Adjusted for main header */
+}
+
+h2 {
+    font-size: 4.5em; /* Adjusted for section headers */
+}
+
+h3, h4 {
+    font-size: 3.6em; /* Adjusted for sub-headers */
+}
+
+#timer {
+    font-size: 6em; /* Adjusted for the countdown timer */
+    color: #4caf50;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px; /* Adjusted */
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section and table adjustments */
+#about-earth-day, section:not(#countdown) {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    font-size: 2.25em; /* Adjusted */
+}
+
+th, td {
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #81c784;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, p, a, li, dt, dd, #timer, table, th, td {
+        font-size: 1em; /* Scaled down for mobile */
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+/* New Section for User Stories About Earth */
+#love-earth-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 20px auto;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #81c784;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.love-earth-story {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Vendor Prefixes for Animation on the Countdown Timer */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@-webkit-keyframes pulse { /* Chrome, Safari, Opera */
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.05); }
+    100% { -webkit-transform: scale(1); }
+}
+
+#timer {
+    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite; /* Chrome, Safari, Opera */
+}
+
+/* Vendor Prefixes for Transition on Links */
+a {
+    color: #66bb6a;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease; /* Chrome, Safari, Opera */
+    -moz-transition: color 0.3s ease; /* Firefox */
+    -o-transition: color 0.3s ease; /* Opera < 12.1 */
+}
+
+a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+}
