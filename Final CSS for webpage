@@ -1,0 +1,198 @@
+/* Base font size adjustments for a middle ground approach */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f5e9;
+    background-image: url('https://i.ibb.co/0sR74pD/DALL-E-2024-01-22-12-08-58-A-surreal-image-for-Earth-Day-featuring-a-large-vibrant-Earth-as-seen-fro.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    text-align: center;
+    padding: 30px; /* Slightly increased padding */
+    margin: 0;
+    line-height: 2; /* Adjusted for larger text */
+}
+
+/* Styles for the header, including background color, text color, padding, margin, and box shadow for depth */
+header {
+    background-color: #81c784; /* Green background for the header */
+    color: white; /* White text color */
+    padding: 50px 0; /* Vertical padding */
+    margin-bottom: 40px; /* Space below the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow below the header */
+}
+
+/* The header elements use the white color set in the header block */
+header h1, header h3, header h4 {
+    color: white;
+}
+
+/* Sets font sizes for various text elements, making headers significantly larger */
+h1, h2, h3, h4, p, a, li, dt, dd {
+    font-size: 1.8em; /* Increased from original, but less than 3x */
+}
+
+h1 {
+    font-size: 6em; /* Very large font size for main title */
+}
+
+h2 {
+    font-size: 4.5em; /* Adjusted for section headers */
+}
+
+h3, h4 {
+    font-size: 3.6em; /* Adjusted for sub-headers */
+}
+
+/* Styles for the countdown timer, including font size, color, padding, background, and shadow */
+#timer {
+    font-size: 6em; /* Adjusted for the countdown timer */
+    color: #4caf50;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px; /* Adjusted */
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Background, padding, border, and shadow styles for sections and tables */
+#about-earth-day, section:not(#countdown) {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    font-size: 2.25em; /* Adjusted */
+}
+
+th, td {
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #81c784;
+    color: white;
+}
+
+/* Adjusts font sizes for mobile devices to ensure readability */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, p, a, li, dt, dd, #timer, table, th, td {
+        font-size: 1em; /* Scaled down for mobile */
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+/* New Section for User Stories About Earth */
+#love-earth-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 20px auto;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #81c784;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+/* Styles for a new section focused on user stories, including background, padding, scrolling, and visual accents */
+.love-earth-story {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Defines a pulse animation for the countdown timer to draw attention */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Chrome, Safari, Opera version of the pulse animation */
+@-webkit-keyframes pulse { /* Chrome, Safari, Opera */
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.05); }
+    100% { -webkit-transform: scale(1); }
+}
+
+#timer {
+    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite; /* Chrome, Safari, Opera */
+}
+
+/* Smooth color transition for links on hover, with vendor prefixes for compatibility */
+a {
+    color: #66bb6a;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease; /* Chrome, Safari, Opera */
+    -moz-transition: color 0.3s ease; /* Firefox */
+    -o-transition: color 0.3s ease; /* Opera < 12.1 */
+}
+
+a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
+
+/* Ensures floated elements in the nav are cleared properly */
+.horizontal-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Dark background for the nav bar */
+}
+
+.horizontal-nav li {
+    float: left;
+}
+
+.horizontal-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.horizontal-nav li a:hover {
+    background-color: #117a65; /* A shade of green for hover */
+}
+
+/* Clearfix for the horizontal nav to ensure it contains its floated children */
+.horizontal-nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive adjustments for smaller screens, including font size adjustments and navigation layout changes */
+@media (max-width: 768px) {
+    /* Adjustments for navigation, header, and other elements for mobile screens */
+    .horizontal-nav li {
+        float: none;
+    }
+
+    /* Other adjustments for smaller screens */
+    h1, h2, h3, h4, p, a, li, dt, dd, #timer, table, th, td {
+        font-size: 1em; /* Adjusted sizes for readability on mobile devices */
+    }
+
+    table {
+        width: 100%; /* Ensure table layouts adjust to the screen size */
+    }
+    
+    /* Consider adjusting the navigation layout for mobile, if necessary */
+}
