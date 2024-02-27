@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Provides a brief description of the page, which can be used by search engines -->
+    <meta name="description" content="Join the Pizza Cult and explore our sacred pizzas. Dive into the chamber of the 5 cheeses and leave your feedback.">
+    <title>Pizza Cult</title>
+    <!-- Links to the external CSS file for styling -->
+    <link rel="stylesheet" href="za_cult_art.css">
+</head>
+<body>
+    <header>
+        <!-- Main heading of the website -->
+        <h1>Welcome to the Pizza Cult</h1>
+        <!-- Navigation bar -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <!-- Navigation links to different sections of the page -->
+                <li><a href="#chamber">The Chamber of the 5 Cheeses</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section for showcasing the cheeses -->
+    <section id="chamber">
+        <h2>The Chamber of the 5 Cheeses</h2>
+        <div class="chamber-images">
+            <!-- Images of cheeses with alt text for accessibility -->
+            <img src="https://i.ibb.co/TLqBL6Z/Cheese-Chamber-1.webp" alt="Cheese Chamber 1" class="chamber-image">
+            <img src="https://i.ibb.co/SymsftT/Cheese-Chamber-2.webp" alt="Cheese Chamber 2" class="chamber-image">
+            <img src="https://i.ibb.co/3cVs8Wx/Cheese-chamber-3.webp" alt="Cheese Chamber 3" class="chamber-image">
+            <img src="https://i.ibb.co/XDjWRDJ/Cheese-Chamber-4.webp" alt="Cheese Chamber 4" class="chamber-image">
+            <img src="https://i.ibb.co/nrZ8V5C/Cheese-Chamber-5.webp" alt="Cheese Chamber 5" class="chamber-image">
+        </div>
+    </section>
+
+    <!-- Menu section for the pizzas -->
+    <section id="menu">
+        <h2>Our Sacred Pizzas</h2>
+        <div class="pizza-item">
+            <!-- Image of a pizza with alt text for accessibility -->
+            <img src="https://i.ibb.co/j5XWw21/Divine-Pep.webp" alt="The Divine Pepperoni" class="pizza-image">
+            <h3>The Divine Pepperoni</h3>
+            <p>Classic pepperoni with a secret blend of cheeses.</p>
+        </div>
+        <!-- Additional pizza items omitted for brevity -->
+    </section>
+
+    <!-- Feedback section where users can leave their thoughts -->
+    <div class="feedback-section" id="feedback">
+        <h2>We value your feedback!</h2>
+        <p>Which of our divine pizzas captivated your taste buds? Let us know!</p>
+        <!-- Feedback form for direct user input -->
+        <form id="feedbackForm" action="/feedback" method="post">
+            <!-- Textarea for feedback input -->
+            <textarea name="feedback" placeholder="Your feedback here..." required></textarea>
+            <!-- Submit button for the form -->
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <!-- Join Us section with a form for users to sign up or express interest -->
+    <section id="join">
+        <h2>Join the Cult</h2>
+        <form id="joinForm" action="/join" method="post">
+            <!-- Input field for the user's name -->
+            <input type="text" name="name" placeholder="Name" required>
+            <!-- Input field for the user's email -->
+            <input type="email" name="email" placeholder="Email" required>
+            <!-- Submit button for the form -->
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- JavaScript file linked at the bottom for better page load performance -->
+    <script src="za_cult_logic.js"></script>
+</body>
+</html>
